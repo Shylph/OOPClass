@@ -8,7 +8,7 @@ if (query) {
 
 // Load readme content
 $.ajax({
-	url: "https://github.com/Shylph/OOPClass/"+branch+"/readme.md",
+	url: "https://github.com/Shylph/OOPClass/"+branch+"/README.md",
 	dataType: 'text',
 	success: function(data) {
 		
