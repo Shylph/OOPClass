@@ -9,7 +9,7 @@ if (query) {
 // Load readme content
 $.ajax({
 //	url: "https://github.com/Shylph/OOPClass/"+branch+"/README.md",
-	url:"https://rawgit.com/Shylph/OOPClass/marster/README.md",
+	url:"http://shylph.github.io/OOPClass/README.md",
 	dataType: 'text',
 	success: function(data) {
 		
