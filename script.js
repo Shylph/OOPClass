@@ -8,7 +8,7 @@ if (query) {
 
 // Load readme content
 $.ajax({
-	url: "https://rawgit.com/richjenks/teepee/"+branch+"/readme.md",
+	url: "https://github.com/Shylph/OOPClass/"+branch+"/readme.md",
 	dataType: 'text',
 	success: function(data) {
 		
