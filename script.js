@@ -27,10 +27,10 @@ $.ajax({
 
 function converteEmoticon(html){
 	var result = html;
-	var emoticonList = html.match(/:\s:/g);
+	var emoticonList = html.match(/:[A-Za-z0-9+]*:/g);
 	if(emoticonList!=null){
 		for(var i=0;i<emoticonList.length;i++){
-			result = html.replace(":"+emoticonList[i]+":/g","<img src=\"graphics/emojis/"+emoticonList[i]+".png\">");
+			result = html.replace(emoticonList[i],"<img src=\"graphics/emojis/"+emoticonList[i].slice(1,emoticonList[i].length-1)+".png\" class=emoticon>");
 		}
 	}
 	return result;
