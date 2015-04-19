@@ -26,7 +26,10 @@ $.ajax({
 });
 
 function converteEmoticon(html){
-	var test = html.slice(":\s:");
-	var result = html.replace(":"+test+":","<img src=\"graphics/emojis/"+test+".png\">");
+	var emoticonList = text.match(/[:]\s[:]/g);
+	var result;
+	for(var i=0;i<remoticonList.length;i++){
+		result = html.replace(":"+emoticonList[i]+":/g","<img src=\"graphics/emojis/"+emoticonList[i]+".png\">");
+	}
 	return result;
 }
