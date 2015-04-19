@@ -15,9 +15,17 @@ $.ajax({
 		
 		// Convert readme from markdown to html
 		var converter = new Markdown.Converter();
-
+/*
 		// Show html
 		$(".wrapper").html(converter.makeHtml(data));
-	
+*/
+		// Show html
+		$(".wrapper").html(converteEmoticon(converter.makeHtml(data)));
+
 	}
 });
+
+function converteEmoticon(html){
+	html.replace(":smile:","<img src=\"graphics/emojis/checkered_flag.png\">");
+	return html
+}
