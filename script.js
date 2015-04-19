@@ -26,6 +26,7 @@ $.ajax({
 });
 
 function converteEmoticon(html){
-	var result = html.replace(":smile:","<img src=\"graphics/emojis/checkered_flag.png\">");
+	var test = html.slice(":\s:");
+	var result = html.replace(":"+test+":","<img src=\"graphics/emojis/"+test+".png\">");
 	return result;
 }
