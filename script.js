@@ -28,7 +28,7 @@ $.ajax({
 function converteEmoticon(html){
 	var emoticonList = html.match(/:\s:/g);
 	var result;
-	for(var i=0;i<remoticonList.length;i++){
+	for(var i=0;i<emoticonList.length;i++){
 		result = html.replace(":"+emoticonList[i]+":/g","<img src=\"graphics/emojis/"+emoticonList[i]+".png\">");
 	}
 	return result;
